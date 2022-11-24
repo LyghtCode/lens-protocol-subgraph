@@ -4,9 +4,9 @@ schema:
 dataSources:
   - kind: ethereum
     name: LensHub
-    network: matic
+    network: telos
     source:
-      address: '0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d'
+      address: '0x95b676be4133a8A13e6eA2622E4b68ACC2b524dd'
       abi: LensHub
       startBlock: 28384641
     mapping:
