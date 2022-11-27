@@ -103,8 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
-generated
-build
+
 contract.sol
 *.contract.sol
 .DS_Store

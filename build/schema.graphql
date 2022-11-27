@@ -13,13 +13,13 @@ type Stat @entity {
   "Total Publicactions"
   totalPublications: BigInt!
   "Last Comment created"
-  lastCommentCreatedAt: BigInt!
+  lastCommentCreatedAt: BigInt
   "Last Post created"
-  lastPostCreatedAt: BigInt!
+  lastPostCreatedAt: BigInt
   "Last Mirror created"
-  lastMirrorCreatedAt: BigInt!
+  lastMirrorCreatedAt: BigInt
   "Last Profile created"
-  lastProfileCreated: BigInt!
+  lastProfileCreated: BigInt
 }
 
 type Profile @entity {
@@ -39,7 +39,7 @@ type Profile @entity {
   "URI image of the profile"
   imageURI: String # string
   "Date created profile"
-  createdAt: BigInt!
+  createdAt: BigInt
   "Follow Module Address"
   followModule: Bytes
   "Follow Module Return Data"
@@ -170,10 +170,10 @@ type Follow @entity {
 
 type FollowNFTTransferred @entity {
   id: ID!
-  profileId: BigInt!
-  followNFTID: BigInt!
+  profileId: BigInt
+  followNFTID: BigInt
   from: Bytes
   to: Bytes
-  timestamp: BigInt!
+  timestamp: BigInt
   data: String
 }

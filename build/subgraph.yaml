@@ -1,12 +1,12 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: LensHub
-    network: mainnet
+    network: telos
     source:
-      address: '0xED8fc9bacb0f0DAAB7e8F85735D33ec6B4Ee1eb0'
+      address: "0x95b676be4133a8A13e6eA2622E4b68ACC2b524dd"
       abi: LensHub
       startBlock: 28384641
     mapping:
@@ -18,9 +18,10 @@ dataSources:
         - Account
       abis:
         - name: LensHub
-          file: ./abis/LensHub.json
+          file: LensHub\abis\LensHub.json
       eventHandlers:
-        - event: ProfileCreated(indexed uint256,indexed address,indexed address,string,string,address,bytes,string,uint256)
+        - event: ProfileCreated(indexed uint256,indexed address,indexed
+            address,string,string,address,bytes,string,uint256)
           handler: handleProfileCreated
         - event: FollowNFTURISet(indexed uint256,string,uint256)
           handler: handleFollowNFTURISet
@@ -32,11 +33,14 @@ dataSources:
           handler: handleProfileCreatorWhitelisted
         - event: FollowModuleSet(indexed uint256,address,bytes,uint256)
           handler: handleFollowModuleSet
-        - event: PostCreated(indexed uint256,indexed uint256,string,address,bytes,address,bytes,uint256)
+        - event: PostCreated(indexed uint256,indexed
+            uint256,string,address,bytes,address,bytes,uint256)
           handler: handlePostCreated
-        - event: MirrorCreated(indexed uint256,indexed uint256,uint256,uint256,bytes,address,bytes,uint256)
+        - event: MirrorCreated(indexed uint256,indexed
+            uint256,uint256,uint256,bytes,address,bytes,uint256)
           handler: handleMirrorCreated
-        - event: CommentCreated(indexed uint256,indexed uint256,string,uint256,uint256,bytes,address,bytes,address,bytes,uint256)
+        - event: CommentCreated(indexed uint256,indexed
+            uint256,string,uint256,uint256,bytes,address,bytes,address,bytes,uint256)
           handler: handleCommentCreated
         - event: Followed(indexed address,uint256[],bytes[],uint256)
           handler: handleFollowed
@@ -44,4 +48,4 @@ dataSources:
           handler: handleDefaultProfileSet
         - event: FollowNFTTransferred(indexed uint256,indexed uint256,address,address,uint256)
           handler: handleFollowNFTTransferred
-      file: ./src/mappings/index.ts
+      file: LensHub\LensHub.wasm
