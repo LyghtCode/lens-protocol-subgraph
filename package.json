@@ -1,13 +1,13 @@
 {
-  "name": "lens-subgraph",
+  "name": "couni-subgraph",
   "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ rtomas/lens-subgraph",
-    "create-local": "graph create --node http://localhost:8020/ rtomas/lens-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ rtomas/lens-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 rtomas/lens-subgraph"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ couni/subgraph",
+    "create-local": "graph create --node http://localhost:8020/ couni/subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ couni/subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 couni/subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.29.2",
